@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Admin</title>
+  <meta name="description" content="MKstream admin panel (localStorage based for static hosting)" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body class="theme-dark">
+  <div class="site-root">
+    <header class="site-header">
+      <div class="left"><a href="index.html" class="text-btn">Home</a></div>
+      <div class="center"><h1>Admin Panel</h1></div>
+    </header>
+
+    <main class="container admin-container">
+      <section class="admin-section">
+        <h2>Authentication</h2>
+        <div class="form-row">
+          <input id="admin-pass" type="password" class="input" placeholder="Admin password (default 'admin123')">
+          <button id="admin-login" class="btn">Login</button>
+        </div>
+        <div id="admin-status" class="small">Not authenticated</div>
+      </section>
+
+      <section class="admin-section">
+        <h2>Video Editor</h2>
+        <form id="series-form" class="form">
+          <div class="form-row">
+            <select id="form-category" class="input"></select>
+            <input id="form-subcategory" class="input" placeholder="Subcategory (optional)">
+          </div>
+          <div class="form-row">
+            <input id="form-title" class="input" placeholder="Series title">
+            <input id="form-thumbnail" class="input" placeholder="Thumbnail URL (jpg)">
+          </div>
+          <hr>
+          <h4>Episode (add multiple)</h4>
+          <div id="episode-rows"></div>
+          <button id="add-episode-row" type="button" class="btn">Add episode row</button>
+          <div class="form-row" style="margin-top:10px;">
+            <button id="save-series" type="button" class="btn">Save Series</button>
+            <button id="export-json" type="button" class="btn">Export JSON</button>
+            <input id="import-json" type="file" accept=".json" class="input" style="display:inline-block;width:auto;">
+          </div>
+        </form>
+      </section>
+
+      <section class="admin-section">
+        <h2>Web Editor</h2>
+        <div class="form-row">
+          <input id="site-name" class="input" placeholder="Site name">
+          <input id="site-logo" class="input" placeholder="Logo URL">
+        </div>
+        <div class="form-row">
+          <input id="site-password" class="input" placeholder="Admin password">
+          <input id="site-telegram" class="input" placeholder="Telegram feed URL (optional)">
+        </div>
+        <div class="form-row">
+          <label class="small">Theme color: <input id="site-color" type="color" class="input"></label>
+          <button id="save-site" class="btn">Save site settings</button>
+        </div>
+      </section>
+
+      <section class="admin-section">
+        <h2>Ads Manager</h2>
+        <textarea id="ads-header" class="input" placeholder="Header ad code (HTML)"></textarea>
+        <textarea id="ads-player" class="input" placeholder="Player overlay ad code (HTML)"></textarea>
+        <div class="form-row"><button id="save-ads" class="btn">Save ads</button></div>
+      </section>
+
+      <section class="admin-section">
+        <h2>Maintenance</h2>
+        <div class="form-row">
+          <button id="reset-site" class="btn">Reset site (clear localStorage)</button>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><div>© <span id="year-admin"></span> MKstream</div></footer>
+  </div>
+</body>
+</html>

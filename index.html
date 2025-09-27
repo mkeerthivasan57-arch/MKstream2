@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream</title>
+  <meta name="description" content="MKstream - Watch anime, donghua, cartoons, serials, web series, movies" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body class="theme-dark">
+  <div id="app" class="site-root">
+    <header class="site-header">
+      <div class="left">
+        <button id="mobile-menu-btn" class="icon-btn" aria-label="menu">☰</button>
+        <div id="brand" class="brand" role="button" tabindex="0">MKstream</div>
+      </div>
+      <div class="center categories-desktop" id="categories-desktop" aria-hidden="false"></div>
+      <div class="right">
+        <button id="search-toggle" class="icon-btn" aria-label="search">🔍</button>
+        <button id="admin-open" class="text-btn">Admin</button>
+      </div>
+    </header>
+
+    <!-- mobile sidebar -->
+    <aside id="sidebar" class="sidebar" aria-hidden="true">
+      <div class="sidebar-header">
+        <div class="brand">MKstream</div>
+        <button id="sidebar-close" class="icon-btn">✖</button>
+      </div>
+      <nav id="sidebar-cats" class="sidebar-cats"></nav>
+    </aside>
+
+    <!-- search overlay -->
+    <div id="search-overlay" class="overlay hidden" role="dialog" aria-hidden="true">
+      <div class="overlay-inner">
+        <div class="search-row">
+          <input id="search-input" class="input" placeholder="Search series or episodes..." autofocus>
+          <button id="search-close" class="btn">Close</button>
+        </div>
+        <div id="search-results"></div>
+      </div>
+    </div>
+
+    <main class="container">
+      <section id="specials" class="section">
+        <h2>Today's Specials</h2>
+        <div id="specials-grid" class="grid"></div>
+      </section>
+
+      <section id="recent" class="section">
+        <h2>Recently Uploaded</h2>
+        <div id="recent-grid" class="grid"></div>
+      </section>
+
+      <section id="most" class="section">
+        <h2>Most Viewed</h2>
+        <div id="most-grid" class="grid"></div>
+      </section>
+
+      <div class="pager center">
+        <button id="load-more" class="btn">Load more</button>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div>© <span id="year"></span> MKstream</div>
+    </footer>
+  </div>
+</body>
+</html>

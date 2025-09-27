@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Player</title>
+  <meta name="description" content="MKstream player" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body class="theme-dark">
+  <div class="site-root">
+    <header class="site-header"><div class="left"><button id="mobile-menu-btn-pl" class="icon-btn">☰</button><div class="brand">MKstream</div></div><div class="right"><button id="back-home" class="text-btn">Home</button></div></header>
+
+    <main class="container">
+      <div id="player-wrap" class="player-wrap">
+        <h2 id="player-title">Series Title</h2>
+        <div class="player-controls top-controls">
+          <div>
+            <select id="server-select" class="input"></select>
+            <select id="quality-select" class="input">
+              <option value="auto">Auto</option><option value="1080">1080p</option><option value="720">720p</option><option value="480">480p</option><option value="360">360p</option>
+            </select>
+            <select id="subtitle-select" class="input"><option value="">No subtitles</option></select>
+            <button id="download-video" class="btn">Download</button>
+          </div>
+        </div>
+
+        <div id="video-container" class="video-container">
+          <video id="video-player" class="video" controls crossorigin playsinline></video>
+        </div>
+
+        <div id="episode-ranges" class="episode-ranges"></div>
+        <div id="episode-list" class="episode-list"></div>
+
+        <div id="related" class="related"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer"><div>© <span id="year-pl"></span> MKstream</div></footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MKstream - Category</title>
+  <meta name="description" content="MKstream category page" />
+  <link rel="stylesheet" href="style.css">
+  <script defer src="app.js"></script>
+</head>
+<body class="theme-dark">
+  <div class="site-root">
+    <header class="site-header">
+      <div class="left"><button id="mobile-menu-btn-cat" class="icon-btn">☰</button><div id="brand-cat" class="brand">MKstream</div></div>
+      <div class="right"><button id="search-toggle-cat" class="icon-btn">🔍</button><button id="admin-open-cat" class="text-btn">Admin</button></div>
+    </header>
+
+    <aside id="sidebar-cat" class="sidebar" aria-hidden="true"><div class="sidebar-header"><div class="brand">MKstream</div><button id="sidebar-close-cat" class="icon-btn">✖</button></div><nav id="sidebar-cats-cat"></nav></aside>
+
+    <main class="container">
+      <h1 id="category-title">Category</h1>
+      <div id="category-grid" class="grid"></div>
+      <div class="pager center"><button id="category-load-more" class="btn">Load more</button></div>
+    </main>
+
+    <footer class="site-footer"><div>© <span id="year-cat"></span> MKstream</div></footer>
+  </div>
+</body>
+</html>
